@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+
+  build:
+    commands:
+      - echo "Packaging the application..."
+      - mvn clean package -DskipTests
+      - echo "Preparing Elastic Beanstalk bundle..."
+
+  post_build:
+    commands:
+      - echo "Build completed successfully. Artifact is $ARTIFACT_NAME"
+
+artifacts:
+  files:
+    - target/homeStayApp.jar
+  discard-paths: yes
