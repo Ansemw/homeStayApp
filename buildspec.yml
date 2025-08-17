@@ -10,7 +10,7 @@ phases:
 
   post_build:
     commands:
-      - echo "Build completed successfully. Artifact is $ARTIFACT_NAME"
+      - echo "Build completed successfully."
 
 artifacts:
   files:
