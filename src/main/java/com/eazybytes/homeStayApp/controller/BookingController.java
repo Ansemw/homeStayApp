@@ -18,6 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import java.time.LocalDate;
 import java.util.List;
 
 @Controller
@@ -50,6 +51,9 @@ public class BookingController {
                                            Errors errors, Model model, HttpSession httpSession){
         if(booking.getEndDate().isBefore(booking.getStartDate())){
             errors.reject("Dates","End date cannot be before start date");
+        }
+        if(booking.getStartDate().isBefore(LocalDate.now())){
+            errors.reject("Dates","Past dates are not allowed");
         }
         validateBooking(errors, httpSession);
         if(errors.hasErrors())
