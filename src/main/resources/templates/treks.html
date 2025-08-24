@@ -23,10 +23,10 @@
 <section class="inner-banner py-5">
     <div class="w3l-breadcrumb py-lg-5">
         <div class="container pt-4 pb-sm-4">
-            <h4 class="inner-text-title pt-5">Class Details</h4>
+            <h4 class="inner-text-title pt-5">Trek Details</h4>
             <ul class="breadcrumbs-custom-path">
                 <li><a th:href="@{/home}">Home</a></li>
-                <li class="active"><i class="fas fa-angle-right"></i>Classes</li>
+                <li class="active"><i class="fas fa-angle-right"></i>Treks</li>
             </ul>
         </div>
     </div>
@@ -37,9 +37,9 @@
 
     <div class="container-fluid px-0">
         <div class="row mb-4">
-            <div class="overview-wrap">
+       <!--     <div class="overview-wrap">
                 <h3 class="heading-21921">EazySchool Class Details</h3>
-            </div>
+            </div>-->
         </div>
         <div class="table-responsive">
             <p th:if="${#lists.isEmpty(treks)}">No data available.</p>

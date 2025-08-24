@@ -29,9 +29,6 @@ INSERT INTO `roles` (`role_name`,`created_at`, `created_by`)
   VALUES ('GUEST',CURDATE(),'DBA');
 
 
-INSERT INTO `person` VALUES
-(1,'Anurag','anurag@g.com','9761594808','54321',2,NULL,NULL,'2025-01-04 11:48:24','anonymousUser',NULL,NULL),
-(2,'Admin','admin@homestay.com','3443434343','$2a$12$1WeFpeOZ9sc5mQpLoN8aFeoU1r0MktA9Td4Hw8QXw1Lqt2TLbKACu',1,NULL,NULL,'2025-01-07 18:30:00','DBA',NULL,NULL);
 
 INSERT INTO `room` (`room_no`,`floor`,`desc`,`created_at`, `created_by`)
  VALUES (1,'Ground','A river facing room that can house upto four people',CURDATE(),'DBA');

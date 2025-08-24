@@ -34,6 +34,9 @@
                             <a th:href="@{/login}" class="nav-link">LogIn</a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
+                            <a th:href="@{/home}" class="nav-link" aria-current="page">Home</a>
+                        </li>
+                        <li class="nav-item" sec:authorize="isAuthenticated()">
                             <a th:href="@{/dashboard}" class="nav-link">Dashboard</a>
                         </li>
                         <li class="nav-item" sec:authorize="isAuthenticated()">
