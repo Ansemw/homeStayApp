@@ -48,7 +48,9 @@ public class BookingController {
     @RequestMapping("/availableRooms")
     public String showAvailableRooms(@Valid @ModelAttribute("booking") Booking booking,
                                            Errors errors, Model model, HttpSession httpSession){
-
+        if(booking.getEndDate().isBefore(booking.getStartDate())){
+            errors.reject("Dates","End date cannot be before start date");
+        }
         validateBooking(errors, httpSession);
         if(errors.hasErrors())
         {
